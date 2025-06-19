@@ -81,7 +81,7 @@ const Tables = () => {
   return (
     <div>
         <p className='text-sm text-[#818181]'>January 2025</p>
-        <Table columns={columns}  dataSource={data}/>
+        <Table  columns={columns}  dataSource={data}/>
     </div>
   )
 }
