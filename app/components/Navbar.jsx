@@ -15,7 +15,7 @@ const Navbar = () => {
     }
   return (
     <div>
-        <div className='bg-white w-[80vw] p-2 gap-9 flex items-center'>
+        <div className='bg-white w-[80%] p-2 gap-9 flex items-center'>
                 {contextHolder}
                <div className='ml-[60rem] cursor-pointer'>
                  <button className='cursor-pointer' onClick={()=>openNotification()}><IoMdNotificationsOutline /></button>
