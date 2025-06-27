@@ -88,7 +88,7 @@ const page = () => {
 
         <div className='bg-[#F9FDFA] ml-64 '>
             <Navbar />
-            <div className='p-10'>
+            <div className='p-10 mainn'>
                 {renderPages()}
             </div>
             

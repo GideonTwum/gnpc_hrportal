@@ -1,2 +1,8 @@
 @import "tailwindcss";
 
+.mainn{
+
+background-image: radial-gradient(circle at 0.5px 0.5px, rgba(0,0,0,0.2) 0.5px, transparent 0.5px);
+background-size: 10px 10px;
+background-repeat: repeat;
+}

@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CiSearch } from "react-icons/ci";
-import Tables from '../utils/Tables';
-import ApplicantStatus from '../utils/ApplicantStatus';
+import ViewApplicants from '../applications/ViewApplicants';
+import Status from '../applications/Status';
+
 
 const Applications = () => {
+    const [activePage, setActivePage] = useState()
+    const assignActivePage = (getValue) => {
+        setActivePage(getValue)
+    }
+
+    const renderPages = () => {
+        switch(activePage){
+            case 'applications':
+                return <ViewApplicants />
+            case 'status':
+                return <Status />
+                default:
+                    return <ViewApplicants />
+
+        }
+    }
   return (
     <div className='ml-15 flex flex-col gap-4'>
         <div>
@@ -32,9 +49,18 @@ const Applications = () => {
                 </select>
             </div>
         </div>
-        <div>
-            <Tables />
-            <ApplicantStatus />
+        <div className='flex flex-col gap-4'>
+            <div className='flex gap-4'>
+                <div onClick={() => assignActivePage('applications')} className={`shadow w-[fit-content] ${activePage === 'application' ? 'bg-[#77C5D6]' : 'bg-white'} p-2 rounded cursor-pointer hover:bg-[#77C5D6] `}>
+                    <p className='text-sm'>View All Applications</p>
+                </div>
+                <div onClick={() => assignActivePage('status')} className={`shadow w-[fit-content] ${activePage === 'status' ? 'bg-[#77C5D6]' : 'bg-white'} p-2 rounded cursor-pointer hover:bg-[#77C5D6]`}>
+                    <p className='text-sm'>View Applicant Status</p>
+                </div>
+            </div>
+            <div>
+                {renderPages()}
+            </div>
         </div>
        
     </div>
