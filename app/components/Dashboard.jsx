@@ -96,29 +96,29 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div className='w-full flex flex-col gap-6'>
-        <div className='flex items-center gap-6 w-full '>
-            <div className='bg-white flex flex-col items-center justify-center h-[15vh] w-[10vw] p-4 rounded shadow '>
+    <div className='w-full flex flex-col gap-6 p-4'>
+        <div className='flex items-center gap-4 w-full flex-wrap ml-15'>
+            <div className='bg-white flex flex-col items-center justify-center h-[15vh] min-w-[200px] flex-1 p-4 rounded shadow'>
                 <p className='text-sm'>Total Applicants</p>
                 <p className='font-bold text-2xl'>{counts.total}</p>
             </div>
-             <div className='bg-white flex flex-col items-center justify-center h-[15vh] w-[10vw] p-4 rounded shadow '>
+             <div className='bg-white flex flex-col items-center justify-center h-[15vh] min-w-[200px] flex-1 p-4 rounded shadow'>
                 <p className='text-sm'>Approved</p>
                 <p className='font-bold text-2xl text-blue-500'>{counts.approved}</p>
             </div>
-             <div className='bg-white flex flex-col items-center justify-center h-[15vh] w-[10vw] p-4 rounded shadow '>
+             <div className='bg-white flex flex-col items-center justify-center h-[15vh] min-w-[200px] flex-1 p-4 rounded shadow'>
                 <p className='text-sm'>Rejected</p>
                 <p className='font-bold text-2xl text-red-500'>{counts.rejected}</p>
             </div>
-             <div className='bg-white flex flex-col items-center justify-center h-[15vh] w-[10vw] p-4 rounded shadow '>
+             <div className='bg-white flex flex-col items-center justify-center h-[15vh] min-w-[200px] flex-1 p-4 rounded shadow'>
                 <p className='text-sm'>Pending</p>
                 <p className='font-bold text-2xl text-yellow-500'>{counts.pending}</p>
             </div>
         </div>
-        <div>
-            <p> Recent Applications Preview</p>
-            <div className='flex gap-2'>
-                <div className='bg-white shadow h-[10vh] flex items-center gap-4 p-2 w-[25vw]'>
+        <div className='w-full ml-15'>
+            <p className='mb-2'> Recent Applications Preview</p>
+            <div className='flex gap-4 w-full overflow-x-auto pb-2'>
+                <div className='bg-white shadow h-[10vh] flex items-center gap-4 p-2 min-w-[300px] flex-shrink-0'>
                     <div className='bg-gray-300 rounded-full flex w-[fit-content] p-2 items-center justify-center'>
                         <CiUser className='text-2xl'/>  
                     </div>
@@ -131,7 +131,7 @@ const Dashboard = () => {
                     </div>
 
                 </div>
-                <div className='bg-white shadow h-[10vh] flex items-center gap-4 p-2 w-[25vw]'>
+                <div className='bg-white shadow h-[10vh] flex items-center gap-4 p-2 min-w-[300px] flex-shrink-0'>
                     <div className='bg-gray-300 rounded-full flex w-[fit-content] p-2 items-center justify-center'>
                         <CiUser className='text-2xl'/>  
                     </div>
@@ -144,7 +144,7 @@ const Dashboard = () => {
                     </div>
 
                 </div>
-                <div className='bg-white shadow h-[10vh] flex items-center gap-4 p-2 w-[25vw]'>
+                <div className='bg-white shadow h-[10vh] flex items-center gap-4 p-2 min-w-[300px] flex-shrink-0'>
                     <div className='bg-gray-300 rounded-full flex w-[fit-content] p-2 items-center justify-center'>
                         <CiUser className='text-2xl'/>  
                     </div>
@@ -160,7 +160,7 @@ const Dashboard = () => {
             </div>
         </div>
 
-        <div className='bg-white flex items-center  shadow h-[40vh] w-full p-4'>
+        <div className='bg-white flex items-center shadow h-[40vh] ml-15 w-full p-4 rounded'>
             <Bcharts />
         </div>
     </div>
