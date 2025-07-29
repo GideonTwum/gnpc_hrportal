@@ -9,6 +9,7 @@ import { LuMessageSquareMore } from "react-icons/lu";
 import { HiOutlineAdjustmentsVertical } from "react-icons/hi2";
 import { IoSettingsOutline } from "react-icons/io5";
 import { CiLogout } from "react-icons/ci";
+import { FaRegFile, FaRegUser } from 'react-icons/fa';
 
 //imports components
 import Dashboard from '../components/Dashboard';
@@ -17,6 +18,8 @@ import Intern from '../components/Intern';
 import Messages from '../components/Messages';
 import Settings from '../components/Settings';
 import Navbar from '../components/Navbar';
+import Onboarding from '../components/Onboarding';
+import Report from '../components/Report';
 
 
 
@@ -42,6 +45,10 @@ const page = () => {
                 return <Applications />
             case 'messages':
                 return <Messages />
+            case 'onboarding':
+                return <Onboarding />
+            case 'report':
+                return <Report />
             case 'intern':
                 return <Intern />
             case 'settings':
@@ -51,8 +58,8 @@ const page = () => {
         }
     }
   return (
-    <div className='flex min-h-screen bg-[#F9FDFA] gap-4'>
-        <div className='w-[20vw] flex bg-white flex-col items-center gap-4  fixed  h-full '>
+    <div className='flex min-h-screen w-[100%] bg-[#F9FDFA] gap-2'>
+        <div className='w-[20vw] flex bg-white flex-col items-center   fixed  h-full '>
             <div>
                 <Image width={300} height={300} src='/images/gnpclogo.png' alt='GNPC LOGO'/>
             </div>
@@ -68,6 +75,14 @@ const page = () => {
                 <div onClick={() => assignActivePage('messages')} className='flex items-center gap-2 hover:bg-[#2D8FA5] text-[#818181] hover:text-white p-2 rounded cursor-pointer duration-2s '>
                     <LuMessageSquareMore/>
                     <p className='text-sm'>Messages</p>
+                </div>
+                <div onClick={() => assignActivePage('onboarding')} className='flex items-center gap-2 hover:bg-[#2D8FA5] text-[#818181] hover:text-white p-2 rounded cursor-pointer duration-2s '>
+                    <FaRegUser />
+                    <p className='text-sm'>Onboarding</p>
+                </div>
+                <div onClick={() => assignActivePage('report')} className='flex items-center gap-2 hover:bg-[#2D8FA5] text-[#818181] hover:text-white p-2 rounded cursor-pointer duration-2s '>
+                    <FaRegFile />
+                    <p className='text-sm'>Reports</p>
                 </div>
                 <div onClick={() => assignActivePage('intern')} className='flex items-center gap-2 hover:bg-[#2D8FA5] text-[#818181] hover:text-white p-2 rounded cursor-pointer duration-2s '>
                     <HiOutlineAdjustmentsVertical/>
