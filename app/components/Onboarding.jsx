@@ -1507,7 +1507,7 @@ const Onboarding = () => {
     <div className="w-full p-6 ml-15 bg-gray-50 min-h-screen">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">GNPC Intern Onboarding Management</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">Onboarding Management</h1>
         <p className="text-gray-600">Manage and track intern onboarding applications and documents</p>
       </div>
 
